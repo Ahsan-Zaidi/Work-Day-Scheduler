@@ -29,10 +29,10 @@
 
 I have created a work day scheduler through javascript and third party apis. The purpose of this application is to keep your day organized without having a physical planner.
 
-✋ [GitHub Repository]
+✋ [GitHub Repository] (https://github.com/Ahsan-Zaidi/Work-Day-Scheduler/)
 
 
-✋ [Deployed App]
+✋ [Deployed App] (https://ahsan-zaidi.github.io/Work-Day-Scheduler/)
 
 
 ## ✋User Story
