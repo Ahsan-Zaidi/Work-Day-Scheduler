@@ -7,6 +7,7 @@ function generatePlanner(time, time_24, timeText) {
     //display time
     var $col1El = $('<div>').addClass("col-2 py-3 bg-warning align-middle");
     var $timeEl = $('<h5>').addClass("text-center").text(time + timeText);
+    //append column to the time block
     $col1El.append($timeEl);
     //write text
     var $col2El = $('<textarea>').addClass("col-8 py-3 overflow-auto border border-primary");
@@ -35,10 +36,12 @@ function generatePlanner(time, time_24, timeText) {
     $(".container").append($rowEl);
 }
 
+//saves the plan for the time of day into the local storage
 function setPlan(timeOfday, plan) {
     localStorage.setItem(timeOfday, plan);
 }
 
+//get the plan from local storage
 function getPlan(time) {
     let plan = localStorage.getItem(time)
     if (true) {
@@ -46,29 +49,34 @@ function getPlan(time) {
     }
 }
 $(document).ready(function () {
-    //
     //display current day on the top
     $('#currentDay').css("font-weight", "bold").text(moment().format('dddd, MMMM Do, YYYY'));
-    // 'Friday, June 24, 2016 1:42 AM'
+
     var time = 0;
-    for (var i = 9; i <= 17; i++) {//Business hrs 9am-5pm
-        if (i < 12) {//when time is before 12 pm
-            generatePlanner(i, i, ":00 AM")//morning
+    //Business hrs 9am-5pm
+    for (var i = 9; i <= 17; i++) {
+        //when time is before 12 pm
+        if (i < 12) { 
+            //it will be morning
+            generatePlanner(i, i, ":00 AM")
         }
-        else if (i === 12) {//when time is 12 pm change am to pm
-            generatePlanner(i, i, ":00 PM")//noon
+        //when time is 12 pm change am to pm
+        else if (i === 12) { 
+            //it will be noon
+            generatePlanner(i, i, ":00 PM")
         }
-        else {//when time has past 12 pm change am to pm and start with 1 
+        else {
+            //when time has past 12 pm change am to pm and start with 1 
             time++;
             //passing i to change the bgcolor using time-24hr
-            generatePlanner(time, i, ":00 PM")//noon
+            generatePlanner(time, i, ":00 PM")
         }
         getPlan(i)
     }
  
-    //when save btn is clicked
+    //When you click save button
     $(".saveBtn").on('click', function () {
-        //get time using row 
+        //grab the time using current row
         var timeOfday = $(this).parent().attr("value");
         //get plan from textarea at that time
         var plan = $(this).siblings('textArea').val()
