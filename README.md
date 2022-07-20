@@ -1,5 +1,5 @@
 # Work-Day-Scheduler
-<h1 align="center"> Code Refactor 👋</h1>
+<h1 align="center"> Work-Day-Scheduler 👋</h1>
   
 <p align="center">
     <img src="https://img.shields.io/github/repo-size/jpd61/e-commerce-backend" />
@@ -27,27 +27,33 @@
 
 🔍Being a web developer means being part of a community. You’ll need a place to share your projects not only if you're applying for jobs or working as a freelancer but also so that you can share your work with fellow developers and collaborate on future projects.
 
-I have created a password generator through Javascript, its purpose is to generate a password based on the users selected criteria. Then display the password for the user.
+I have created a work day scheduler through javascript and third party apis. The purpose of this application is to keep your day organized without having a physical planner.
 
-✋ [GitHub Repository](https://github.com/Ahsan-Zaidi/Password-Generator)
+✋ [GitHub Repository]
 
 
-✋ [Deployed App](https://ahsan-zaidi.github.io/Password-Generator/)
+✋ [Deployed App]
 
 
 ## ✋User Story
 
-I WANT to randomly generate a password that meets certain criteria SO THAT I can create a strong password that provides greater security
+I WANT to add important events to a daily planner
+SO THAT I can manage my time effectively
 
 ## ✋Acceptance Criteria
 
-* WHEN I click the button to generate a password THEN I am presented with a series of prompts for password criteria
-* WHEN prompted for password criteria THEN I select which criteria to include in the password
-* WHEN prompted for the length of the password THEN I choose a length of at least 8 characters and no more than 128 characters
-* WHEN asked for character types to include in the password THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-* WHEN I answer each prompt THEN my input should be validated and at least one character type should be selected
-* WHEN all prompts are answered THEN a password is generated that matches the selected criteria
-* WHEN the password is generated THEN the password is either displayed in an alert or written to the page
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with time blocks for standard business hours
+WHEN I view the time blocks for that day
+THEN each time block is color-coded to indicate whether it is in the past, present, or future
+WHEN I click into a time block
+THEN I can enter an event
+WHEN I click the save button for that time block
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
 
 ## Table of Contents
 - [Description](#description)
@@ -73,7 +79,7 @@ No testing is currently set up
 
 ## 👪Contribution
 
-Enail me for contribution.
+Email me for contribution.
 
 ## Questions
 
